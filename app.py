@@ -30,7 +30,9 @@ slider_ma = st.sidebar.slider(
 
 mselect_year = st.sidebar.multiselect(
     'Year',
-    (2016,2017,2018,2019))
+    (2016,2017,2018,2019),
+    default = (2016,2017,2018,2019)
+)
 
 mselect_month = st.sidebar.multiselect(
     'Month',
