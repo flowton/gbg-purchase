@@ -23,9 +23,11 @@ checkbox_ma = st.sidebar.checkbox(
     'Show Moving Average'
 
 )
-
-slider_ma = st.sidebar.slider(
-    'Moving Average', 1,12
+if checkbox_ma:
+    slider_ma = st.sidebar.slider(
+        'Moving Average', 1,12
+else:
+     slider_ma = 1
 )
 
 mselect_year = st.sidebar.multiselect(
