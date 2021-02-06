@@ -41,6 +41,8 @@ st.sidebar.markdown("""
 def time_mode():
     st.markdown("""
     # :calendar: Time Analysis
+    
+    > Exploration starts from a time perspective. Having data for 48 months provides the opportunity to analyze this both from a seasonality and a general trend angle.
     """)
     checkbox_raw_data = st.sidebar.checkbox(
         'Show Raw Data'
@@ -117,7 +119,9 @@ def trend_mode():
     # :chart_with_upwards_trend: Trend analysis""")
 
     st.markdown('''
-    ### Finding rising and falling suppliers
+    ### Finding suppliers on upwards or downwards trends.
+    
+    > Looking at the trend, interesting suppliers could be filtered out as having an steady upwards (receiving more purchases) or downwards trend.
     '''
                 )
 
@@ -178,6 +182,8 @@ def trend_mode():
 def account_mode():
     st.markdown("""
     # :clipboard: Account Analysis 
+                
+    > Analyze the account amounts to better understand on what cost categories the city of Gothenburg spends its money on. 
                 """)
     df_account = pd.read_csv('df_account.csv')
 
@@ -186,6 +192,9 @@ def account_mode():
 def financial_mode():
     st.markdown("""
                 # :heavy_dollar_sign: Financials
+                
+                > Exploration with financial data. Suppliers are having different levels of dependency on the purchases of the City of Gothenburg to survive. To find out, the open data can be augmented with the suppliers financial data to compare invoicing with their total turnover .
+                
                 ### Accounting Year 2019
                 """)
     df_financial = pd.read_csv('df_financial_filtered.csv')
@@ -224,6 +233,8 @@ def financial_mode():
 def supplier_search_mode():
     st.markdown('''
     # :mag: Supplier Search
+    
+    > Free text search to find specific suppliers
     ''')
 
     user_input = st.text_input('Search for specific supplier here ', 'chalmers')
